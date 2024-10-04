@@ -21,7 +21,7 @@ jobs:
       - name: Run a one-line script
         run: docker compose -f "docker-compose.yml" up -d --build
       - name: Cache
-        uses: satackey/action-docker-layer-caching@v0.0.11
+        uses: jpribyl/action-docker-layer-caching@v0.1.1
         id: cache-docker-layer
         with:
           key: ${{ hashFiles('docker-compose.yml') }}      
